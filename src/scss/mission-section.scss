@@ -1,0 +1,156 @@
+@import '_breakpoints';
+@import '_mixins';
+
+// @file
+// Styles for a custom Mission section.
+
+.mission {
+    h2,
+    h3,
+    p {
+        font-family: 'Sofia Pro', sans-serif;
+        font-weight: 400;
+    }
+
+    .mission-section {
+        padding: 40px 0;
+    }
+
+    .mission-header {
+        
+        h2 {
+            font-size: 40px;
+            position: relative;
+
+            // 768px window width and more
+            @include md {
+                font-size: 90px;
+            }
+
+            &:after {
+                border-bottom: 4px solid #e4c346;
+                content: "";
+                display: block;
+                left: 0;
+                margin: 3rem auto;
+                position: absolute;
+                width: 25%;
+
+                // 768px window width and more
+                @include md {
+                    border-bottom: 6px solid #e4c346;
+                    width: 25%;
+                }
+            }
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    .mission-info {
+        margin: 8rem 0;
+    }
+
+    .grid__item {
+
+        &.mission-description {
+            flex: 1 1 100%;
+            max-width: 100%;
+            
+            // 768px window width and more
+            @include md {
+                flex: 3;
+            }
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                padding: 0;
+
+                // 768px window width and more
+                @include md {
+                    font-size: 18px;
+                    line-height: 26px;
+                    padding: 0 40px;
+                }
+            }
+        }
+        &.mission-image {
+            flex: 1 1 100%;
+            max-width: 100%;
+
+            // 768px window width and more
+            @include md {
+                flex: 2;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+
+                // 768px window width and more
+                @include md {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+
+    .custom-feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+        
+        &.custom-feature-list__mission {
+            gap: 40px 20px;
+            text-align: center;
+
+            // 768px window width and more
+            @include md {
+                gap: 40px
+            }
+        }
+
+        .feature-item {
+            max-width: 150px;
+
+            // 768px window width and more
+            @include md {
+                max-width: 180px;
+            }
+
+            &.feature-item__mission {
+                h3 {
+                    margin: 1em 0 0;
+                }
+                img {
+                    height: 56px;
+                    width: 56px;
+                    
+                    // 768px window width and more
+                    @include md {
+                        height: 72px;
+                        width: 72px;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    // 768px window width and more
+                    @include md {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 768px window width and more
+    @include md {
+
+    }
+}
