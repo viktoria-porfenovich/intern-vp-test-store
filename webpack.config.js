@@ -51,12 +51,12 @@ module.exports = {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].css',
+        filename: '[name].css',
       }),
       new FixStyleOnlyEntriesPlugin({ extensions: ['scss'] }),
     ],
     output: {
       path: path.resolve(__dirname, 'assets'),
-      filename: 'js/[name].js', //Output JavaScript
+      filename: '[name].js', //Output JavaScript
     },
 };
