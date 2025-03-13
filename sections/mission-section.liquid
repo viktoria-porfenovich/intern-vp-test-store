@@ -10,7 +10,7 @@
       <h2 class="section-heading h1">{{ section.settings.section_heading }}</h2>
     {% endif %}
   </div>
-  <div class="mission-info grid grid--1-col-tablet-down grid--1-col-desktop">
+  <div class="mission-info grid grid--gapless grid--2-col-tablet-down grid--1-col-desktop">
     <div class="mission-image grid__item">
     {% if section.settings.section_image %}
       <img src="{{ section.settings.section_image | img_url: 'large' }}" alt="Section Image">
@@ -97,14 +97,21 @@ h2.section-heading::after {
 .feature-item {
   max-width: 200px;
 }
+<!-- this is for mobile -->
+  .custom-feature-list.custom-feature-list__mission {
+    gap: 40px 20px;
+  }
+  .feature-item.feature-item__mission {
+    max-width: 150px;
+<!-- end -->
 
   .feature-item.feature-item__mission {
     max-width: 180px;
   }
   .feature-item.feature-item__mission h3  { margin: 1em 0 0; }
   .feature-item.feature-item__mission img {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
   }
   .feature-item.feature-item__mission p {
     font-size: 14px;
