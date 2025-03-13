@@ -23,13 +23,13 @@
     </div>
   </div>
 
-  <div class="custom-feature-list">
+  <div class="custom-feature-list custom-feature-list__mission">
     {% for block in section.blocks %}
-      <div class="feature-item" {{ block.shopify_attributes }}>
+      <div class="feature-item feature-item__mission" {{ block.shopify_attributes }}>
         {% if block.settings.feature_image %}
           <img src="{{ block.settings.feature_image | img_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
         {% endif %}
-        <h3>{{ block.settings.feature_title }}</h3>
+        <h3 class="section-heading h2">{{ block.settings.feature_title }}</h3>
         <p>{{ block.settings.feature_subtitle }}</p>
       </div>
     {% endfor %}
@@ -68,7 +68,7 @@ h2.section-heading::after {
     position: absolute;
     left: 0;
 }
- .mission-info { margin: 8rem 0 2rem; }
+ .mission-info { margin: 8rem 0; }
   
   .mission-image grid__item {
     flex: 2;
@@ -77,9 +77,15 @@ h2.section-heading::after {
   
   .mission-description grid__item {
     flex: 3;
-    p { padding: 0 40px; }
+    p { padding: 0 40px;
+      font-size: 18px;
+    line-height: 26px;
+      }
   }
-  
+.custom-feature-list__mission {
+  gap: 40px;
+  text-align: center;
+}  
 .custom-feature-list {
   display: flex;
   flex-wrap: wrap;
@@ -90,6 +96,15 @@ h2.section-heading::after {
 .feature-item {
   max-width: 200px;
 }
+
+  .feature-item__mission h3  { margin: 1em 0 0; }
+  .feature-item__mission img {
+    width: 64px;
+    height: 64px;
+  }
+  .feature-item__mission p {
+    font-size: 14px;
+  }
 .feature-item img {
   width: 100%;
   height: auto;
