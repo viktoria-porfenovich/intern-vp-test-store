@@ -35,6 +35,18 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
 
+    {% comment %} Load assets from assets/css folder {% endcomment %}
+    {%- assign css_files = 'header-style.css,hero-style.css' | split: ',' -%}
+    {%- for file in css_files -%}
+      <link rel="stylesheet" href="{{ 'css/' | append: file | asset_url }}">
+    {%- endfor -%}
+
+    {% comment %} Load assets from assets/js folder {% endcomment %}
+    {%- assign js_files = 'header.js,hero.js' | split: ',' -%}
+    {%- for file in js_files -%}
+      <script src="{{ 'js/' | append: file | asset_url }}" defer></script>
+    {%- endfor -%}
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
