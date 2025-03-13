@@ -58,6 +58,55 @@
     },
     "mission_section_8iBMit": {
       "type": "mission-section",
+      "blocks": {
+        "feature_item_hxgDgy": {
+          "type": "feature_item",
+          "settings": {
+            "feature_image": "shopify://shop_images/world.png",
+            "feature_title": "Earth",
+            "feature_subtitle": "Many desktop publishing packages"
+          }
+        },
+        "feature_item_LVUkxE": {
+          "type": "feature_item",
+          "settings": {
+            "feature_image": "shopify://shop_images/piggy-bank.png",
+            "feature_title": "Piggy bank",
+            "feature_subtitle": " Many publishing packages"
+          }
+        },
+        "feature_item_U3DhEN": {
+          "type": "feature_item",
+          "settings": {
+            "feature_image": "shopify://shop_images/rocket-lunch.png",
+            "feature_title": "Rocket",
+            "feature_subtitle": " Many desktop packages"
+          }
+        },
+        "feature_item_VFpwmD": {
+          "type": "feature_item",
+          "settings": {
+            "feature_image": "shopify://shop_images/paw.png",
+            "feature_title": "Paw",
+            "feature_subtitle": "Desktop publishing packages"
+          }
+        },
+        "feature_item_kqyWpq": {
+          "type": "feature_item",
+          "settings": {
+            "feature_image": "shopify://shop_images/building.png",
+            "feature_title": "Building",
+            "feature_subtitle": " Many desktop publishing packages"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_hxgDgy",
+        "feature_item_LVUkxE",
+        "feature_item_U3DhEN",
+        "feature_item_VFpwmD",
+        "feature_item_kqyWpq"
+      ],
       "settings": {
         "section_heading": "Mission",
         "section_image": "shopify://shop_images/theme_cover_image.jpg",
