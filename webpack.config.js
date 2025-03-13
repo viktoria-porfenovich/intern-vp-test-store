@@ -1,32 +1,31 @@
 const path = require('path');
 const glob = require('glob');
+const entry = require('webpack-glob-entry');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 // Dynamically generate entry points for all JS files in src/js/
-const jsEntries = Object.fromEntries(
-  glob.sync('./src/js/**/*.js').map((file) => [
-    // Remove 'src/js/' and '.js' to create the output name
-    path.relative('./src/js', file).replace(/\.js$/, ''),
-    path.resolve(__dirname, file),
-  ])
-);
-console.log('JavaScript Entries:', jsEntries);
+const entryObject = entry('./src/js/*');
+Object.keys(entryObject).forEach(entryKey => entryObject[entryKey] = `${entryObject[entryKey]}/index.js`);
+//console.log('Js Entries:', entryObject);
 
-// Dynamically generate entry points for all SCSS files in src/scss/
-const cssEntries = Object.fromEntries(
-  glob.sync('./src/scss/**/*.scss').map((file) => [
-    // Remove 'src/scss/' and '.scss' to create the output name
-    path.relative('./src/scss', file).replace(/\.scss$/, ''),
-    path.resolve(__dirname, file),
-  ])
-);
+// Dynamically generate entry points for all SCSS files in src/scss/ AND adding a suffix to their name
+const getEntries = (pattern, suffix = '') => {
+  return glob.sync(pattern).reduce((entries, file) => {
+    const name = path.basename(file, path.extname(file)); // Get filename without extension
+    entries[`${name}${suffix}`] = path.resolve(__dirname, file);
+    return entries;
+  }, {});
+};
+const cssEntries = getEntries('./src/scss/**/*.scss', '-style'); // Add suffix to SCSS
+//console.log('cssEntries WITH suffix:', cssEntries);
+
+const entries = { ...entryObject, ...cssEntries };
+//console.log('Merged Entries:', entries);
 
 module.exports = {
     mode: 'production',
-    entry: {
-      ...jsEntries,
-      ...cssEntries,
-    },
+    entry: entries,
     //devtool: 'eval-source-map',
     module: {
       rules: [
@@ -41,8 +40,8 @@ module.exports = {
           },
         },
         {
-           test: /\.(s(a|c)ss)$/,
-           use: [
+          test: /\.(s(a|c)ss)$/,
+          use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader'
@@ -50,16 +49,14 @@ module.exports = {
         }
       ]
     },
-    resolve: {
-      extensions: ['*', '.js']
-    },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].css', //Output CSS
-      })
+        filename: 'css/[name].css',
+      }),
+      new FixStyleOnlyEntriesPlugin({ extensions: ['scss'] }),
     ],
     output: {
-      path: path.resolve(__dirname, './assets'),
+      path: path.resolve(__dirname, 'assets'),
       filename: 'js/[name].js', //Output JavaScript
     },
 };

@@ -36,7 +36,7 @@
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
 
     {% comment %} Load assets from assets/css folder {% endcomment %}
-    {%- assign css_files = 'header.css,hero.css' | split: ',' -%}
+    {%- assign css_files = 'header-style.css,hero-style.css' | split: ',' -%}
     {%- for file in css_files -%}
       <link rel="stylesheet" href="{{ 'css/' | append: file | asset_url }}">
     {%- endfor -%}
