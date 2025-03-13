@@ -13,7 +13,7 @@
   <div class="mission-info grid grid--1-col-tablet-down grid--1-col-desktop">
     <div class="mission-image grid__item">
     {% if section.settings.section_image %}
-      <img src="{{ section.settings.section_image | img_url: 'large' }}" alt="Section Image">
+      <img src="{{ section.settings.section_image | image_url: 'large' }}" alt="Section Image">
     {% endif %}
     </div>
     <div class="mission-description grid__item">
@@ -27,7 +27,7 @@
     {% for block in section.blocks %}
       <div class="feature-item feature-item__mission" {{ block.shopify_attributes }}>
         {% if block.settings.feature_image %}
-          <img src="{{ block.settings.feature_image | img_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
+          <img src="{{ block.settings.feature_image | image_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
         {% endif %}
         <h3 class="section-heading h2">{{ block.settings.feature_title }}</h3>
         <p>{{ block.settings.feature_subtitle }}</p>
