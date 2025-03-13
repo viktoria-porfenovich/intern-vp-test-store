@@ -23,9 +23,9 @@
     </div>
   </div>
 
-  <div class="custom-feature-list custom-feature-list__mission">
+  <div class="custom-feature-list custom-feature-list__mission grid grid--2-col-tablet-down">
     {% for block in section.blocks %}
-      <div class="feature-item feature-item__mission" {{ block.shopify_attributes }}>
+      <div class="feature-item feature-item__mission grid__item" {{ block.shopify_attributes }}>
         {% if block.settings.feature_image %}
           <img src="{{ block.settings.feature_image | image_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
         {% endif %}
