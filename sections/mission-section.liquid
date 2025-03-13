@@ -1,128 +1,45 @@
+{{ 'mission-section-style.css' | asset_url | stylesheet_tag }}
+
 <!-- Mission section starts -->
 <section class="mission section-{{ section.id }}-padding shopify-section section">
   <div class="container page-width">
-    <div class="mission">
-
-
-<div class="mission-section">
-  <div class="mission-header">
-    {% if section.settings.section_heading != blank %}
-      <h2 class="section-heading h1">{{ section.settings.section_heading }}</h2>
-    {% endif %}
-  </div>
-  <div class="mission-info grid grid--gapless grid--2-col-tablet-down grid--1-col-desktop">
-    <div class="mission-image grid__item">
-    {% if section.settings.section_image %}
-      <img src="{{ section.settings.section_image | img_url: 'large' }}" alt="Section Image">
-    {% endif %}
-    </div>
-    <div class="mission-description grid__item">
-    {% if section.settings.section_description != blank %}
-      <p>{{ section.settings.section_description }}</p>
-    {% endif %}
-    </div>
-  </div>
-
-  <div class="custom-feature-list custom-feature-list__mission grid grid--2-col-tablet-down">
-    {% for block in section.blocks %}
-      <div class="feature-item feature-item__mission grid__item" {{ block.shopify_attributes }}>
-        {% if block.settings.feature_image %}
-          <img src="{{ block.settings.feature_image | img_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
+    <div class="mission-section">
+      <div class="mission-header">
+        {% if section.settings.section_heading != blank %}
+        <h2 class="section-heading h1">{{ section.settings.section_heading }}</h2>
         {% endif %}
-        <h3 class="section-heading h2">{{ block.settings.feature_title }}</h3>
-        <p>{{ block.settings.feature_subtitle }}</p>
       </div>
-    {% endfor %}
-  </div>
-</div>
+      <div class="mission-info grid grid--gapless grid--2-col-tablet-down grid--1-col-desktop">
+        <div class="mission-image grid__item">
+        {% if section.settings.section_image %}
+        <img src="{{ section.settings.section_image | img_url: 'large' }}" alt="Section Image">
+        {% endif %}
+        </div>
+        <div class="mission-description grid__item">
+        {% if section.settings.section_description != blank %}
+        <p>{{ section.settings.section_description }}</p>
+        {% endif %}
+        </div>
+      </div>
 
-
+      <div class="custom-feature-list custom-feature-list__mission grid grid--2-col-tablet-down">
+        {% for block in section.blocks %}
+        <div class="feature-item feature-item__mission grid__item" {{ block.shopify_attributes }}>
+          {% if block.settings.feature_image %}
+          <img src="{{ block.settings.feature_image | img_url: 'medium' }}" alt="{{ block.settings.feature_title }}">
+          {% endif %}
+          <h3 class="section-heading h2">{{ block.settings.feature_title }}</h3>
+          <p>{{ block.settings.feature_subtitle }}</p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-
   </div>
 </section>
 <!-- Mission section ends -->
       
 <style>
-
-section.mission,
-section.mission h2,
-section.mission h3  {
-    font-family: 'Sofia Pro', sans-serif;
-    font-weight: 400;
-}
-  
-.mission-section {
-  padding: 40px 0;
-}
-.mission-header img {
-  max-width: 100%;
-  height: auto;
-}
-h2.section-heading {position: relative;}
-h2.section-heading::after {
-    border-bottom: 3px solid #e4c346;
-    content: "";
-    display: block;
-    margin: 3rem auto;
-    width: 10%;
-    position: absolute;
-    left: 0;
-}
- .mission-info { margin: 8rem 0; }
-  
-  .mission-image.grid__item {
-    flex: 2;
-    img { max-height: 300px; }
-  }
-  
-  .mission-description.grid__item {
-    flex: 3;
-    p { padding: 0 40px;
-      font-size: 18px;
-    line-height: 26px;
-      }
-  }
-.custom-feature-list.custom-feature-list__mission {
-  gap: 40px;
-  text-align: center;
-}  
-.custom-feature-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-.feature-item {
-  max-width: 200px;
-}
-<!-- this is for mobile -->
-  .custom-feature-list.custom-feature-list__mission {
-    gap: 40px 20px;
-  }
-  .feature-item.feature-item__mission {
-    max-width: 150px;
-<!-- end -->
-
-  .feature-item.feature-item__mission {
-    max-width: 180px;
-  }
-  .feature-item.feature-item__mission h3  { margin: 1em 0 0; }
-  .feature-item.feature-item__mission img {
-    width: 72px;
-    height: 72px;
-  }
-  .feature-item.feature-item__mission p {
-    font-size: 14px;
-  }
-.feature-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
 </style>
-
 
 {% schema %}
 {
