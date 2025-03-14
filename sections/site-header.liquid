@@ -28,7 +28,7 @@
 {%- assign menu_json = menu_items | json -%}
 
 {%- assign menu_json = '[' -%}
-{%- for link in linklists[section.settings.menu].links -%}<script>console.log({{ link.title }});console.log({{ link.url }});</script>
+{%- for link in linklists[section.settings.menu].links -%}<script>console.log({{ link.title }});console.log('"'{{ link.url }}'"');</script>
   {%- assign item = '{ "title": "' | append: link.title | append: '", "url": "' | append: link.url | append: '" }' -%}
   {%- assign menu_json = menu_json | append: item -%}
   {%- unless forloop.last -%}
