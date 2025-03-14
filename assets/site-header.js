@@ -134,9 +134,9 @@ class SiteHeader extends HTMLElement {
     }
 // Mobile menu toggle
 
-    const menuButton = document.querySelector("header-drawer details .header__icon");
+    const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
     
-    menuButton.addEventListener("click", () => {
+    this.shadowRoot.menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
@@ -144,6 +144,7 @@ class SiteHeader extends HTMLElement {
     });
   }
 
+  
 }
 
 // Register custom header element
