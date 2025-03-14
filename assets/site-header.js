@@ -69,7 +69,7 @@ class SiteHeader extends HTMLElement {
           }
           
           details:not([open]) > .header__icon .icon-close,
-          details[open] > .header__icon--menu .icon-hamburger {
+          details[open] > .header__icon .icon-hamburger {
             visibility: hidden;
             opacity: 0;
             transform: scale(0.8);
