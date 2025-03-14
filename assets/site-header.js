@@ -23,7 +23,7 @@ class SiteHeader extends HTMLElement {
           margin: 0 auto;
         }
         .logo img {
-          max-height: 50px;
+          max-height: 55px;
         }
         .nav-links {
           display: flex;
@@ -31,8 +31,14 @@ class SiteHeader extends HTMLElement {
         }
         .nav-links a {
           text-decoration: none;
-          color: var(--menu-text, #333);
-          font-weight: bold;
+          color: var(--menu-text, #0B0D21);
+          font-family: 'Sofia Pro', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+        }
+        .nav-links a:hover {
+          text-decoration: none;
+          color: var(--menu-text, #EBC217);
         }
         .hamburger {
           display: none;
@@ -43,7 +49,7 @@ class SiteHeader extends HTMLElement {
         .hamburger div {
           width: 25px;
           height: 3px;
-          background: var(--menu-text, #333);
+          background: var(--menu-text, #0B0D21);
         }
         .mobile-menu {
           display: none;
@@ -60,7 +66,7 @@ class SiteHeader extends HTMLElement {
           padding: 10px;
           display: block;
           text-align: center;
-          color: var(--menu-text, #333);
+          color: var(--menu-text, #0B0D21);
           text-decoration: none;
         }
         @media (max-width: 768px) {
