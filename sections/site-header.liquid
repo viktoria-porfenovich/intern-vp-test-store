@@ -27,6 +27,6 @@
 {%- assign menu_json = menu_items | json -%}
 
 <site-header 
-  logo="{{ section.settings.logo | image_url }}" name="{{ linklists[section.settings.menu].links }}"
+  logo="{{ section.settings.logo | image_url }}" name="{{ section.settings.menu.links }}"
   menu="{{ menu_json | escape }}">
 </site-header>
