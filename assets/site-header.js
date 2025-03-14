@@ -136,7 +136,7 @@ class SiteHeader extends HTMLElement {
 
     const menuButton = document.querySelector("header-drawer details .header__icon");
     
-    this.shadowRoot.menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
@@ -144,7 +144,11 @@ class SiteHeader extends HTMLElement {
     });
   }
 
-
+menuButton.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', !isExpanded);
+    drawer.classList.toggle('is-open'); // You might have a CSS class to show the menu
+});
   
 }
 
