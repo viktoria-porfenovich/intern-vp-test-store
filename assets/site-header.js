@@ -89,7 +89,7 @@ class SiteHeader extends HTMLElement {
           <!-- Mobile Menu (Header Drawer) -->
           <header-drawer class="menu-drawer">
             <details>
-              <summary class="header__icon" aria-label="Close menu">
+              <summary class="header__icon" aria-label="Close menu" aria-expanded="false">
                 <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="header-drawer-toggle icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
                   <rect width="25" height="2" fill="#0B0D21"/>
                   <rect y="7" width="25" height="2" fill="#0B0D21"/>
@@ -137,11 +137,19 @@ class SiteHeader extends HTMLElement {
       });
     }
 // Mobile menu toggle
-    this.shadowRoot.querySelector("header-drawer .header__icon").addEventListener("click", () => {
+
+    const menuButton = document.querySelector('header-drawer .header__icon');
+    
+    this.shadowRoot.menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', !isExpanded);
     });
   }
+
+
+  
 }
 
 // Register custom header element
