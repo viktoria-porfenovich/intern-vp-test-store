@@ -122,7 +122,7 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.querySelector("header-drawer details");
+      const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
 
       // Add desktop links
       menu.forEach(item => {
