@@ -77,13 +77,6 @@ class SiteHeader extends HTMLElement {
 
       <header>
         <div class="header-container">
-          <!-- Mobile Open Button -->
-          <button is="header-drawer-button" class="header-drawer-toggle" aria-label="Open menu">
-            <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="25" height="2" fill="#0B0D21"/>
-              <rect y="7" width="25" height="2" fill="#0B0D21"/>
-            </svg>
-          </button>
 
           <!-- Logo -->
           <div class="logo">
@@ -92,6 +85,14 @@ class SiteHeader extends HTMLElement {
 
           <!-- Desktop Menu -->
           <nav class="nav-links"></nav>
+
+          <!-- Mobile Open Button -->
+          <button is="header-drawer-button" class="header-drawer-toggle" aria-label="Open menu">
+            <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="25" height="2" fill="#0B0D21"/>
+              <rect y="7" width="25" height="2" fill="#0B0D21"/>
+            </svg>
+          </button>
 
           <!-- Mobile Menu (Header Drawer) -->
           <header-drawer class="menu-drawer">
