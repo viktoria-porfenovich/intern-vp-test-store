@@ -63,7 +63,7 @@
           "type": "feature_item",
           "settings": {
             "feature_image": "shopify://shop_images/bank.png",
-            "feature_title": "Bank",
+            "feature_title": "$4B",
             "feature_subtitle": "Many desktop publishing packages"
           }
         },
@@ -71,7 +71,7 @@
           "type": "feature_item",
           "settings": {
             "feature_image": "shopify://shop_images/handshake.png",
-            "feature_title": "Handshake",
+            "feature_title": "$1B",
             "feature_subtitle": " Many publishing packages"
           }
         },
@@ -79,7 +79,7 @@
           "type": "feature_item",
           "settings": {
             "feature_image": "shopify://shop_images/rocket-lunch_1.png",
-            "feature_title": "Rocket",
+            "feature_title": "30 Yrs",
             "feature_subtitle": " Many desktop packages"
           }
         },
@@ -87,7 +87,7 @@
           "type": "feature_item",
           "settings": {
             "feature_image": "shopify://shop_images/icons8-paw-96_6e3a220d-876d-4e02-b147-4291378b9525.png",
-            "feature_title": "Paw",
+            "feature_title": "$300M",
             "feature_subtitle": "Desktop publishing packages"
           }
         },
@@ -95,7 +95,7 @@
           "type": "feature_item",
           "settings": {
             "feature_image": "shopify://shop_images/shopping-cart.png",
-            "feature_title": "Cart",
+            "feature_title": "100%",
             "feature_subtitle": " Many desktop publishing packages"
           }
         }
