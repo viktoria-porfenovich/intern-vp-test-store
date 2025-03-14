@@ -26,6 +26,7 @@
 {%- assign menu_items = linklists[section.settings.menu].links -%}
 {%- assign menu_json = menu_items | json -%}
 
+<script>console.log('hello');</script>
 <script>console.log({{menu_items}});</script>
 
 <site-header 
