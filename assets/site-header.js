@@ -90,7 +90,7 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.getElementById("mobile-menu");
+      const mobileMenu = this.shadowRoot.querySelector(".mobile-menu");
 
       menu.forEach(item => {
         const link = document.createElement("a");
