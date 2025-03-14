@@ -61,15 +61,11 @@ class SiteHeader extends HTMLElement {
             display: none; /* Hide desktop menu */
           }
 
-          .header-drawer-toggle {
-            display: block; /* Show mobile menu button */
-          }
         }
 
         @media (min-width: 769px) {
-          header-drawer,
-          .header-drawer-toggle {
-            display: none; /* Hide mobile menu button on desktop */
+         /* header-drawer {
+            display: none;  Hide mobile menu button on desktop */
           }
         }
 
@@ -90,7 +86,7 @@ class SiteHeader extends HTMLElement {
           <header-drawer class="menu-drawer">
             <details>
               <summary class="header__icon" aria-label="Close menu" aria-expanded="">
-                <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="header-drawer-toggle icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
                   <rect width="25" height="2" fill="#0B0D21"/>
                   <rect y="7" width="25" height="2" fill="#0B0D21"/>
                 </svg>
