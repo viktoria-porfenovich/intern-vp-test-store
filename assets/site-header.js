@@ -137,7 +137,14 @@ class SiteHeader extends HTMLElement {
       });
     }
   }
+  
+    // Mobile menu toggle
+    this.shadowRoot.querySelector("header-drawer .header__icon").addEventListener("click", () => {
+      const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
+      mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+    });
 
+  
 }
 
 // Register custom header element
