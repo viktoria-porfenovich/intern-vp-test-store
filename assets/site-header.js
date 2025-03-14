@@ -136,7 +136,7 @@ class SiteHeader extends HTMLElement {
 
     const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
     
-    this.shadowRoot.menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
