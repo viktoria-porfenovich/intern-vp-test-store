@@ -20,9 +20,9 @@ class SiteHeader extends HTMLElement {
           font-weight: bold;
         }
       </style>
-      <header>
+      <site-header>
         <slot></slot> <!-- Allows inserting content inside -->
-      </header>
+      </site-header>
     `;
   }
 }
