@@ -23,11 +23,12 @@
 }
 {% endschema %}
 
-{%- assign menu_items = section.settings.menu.links -%}
+<script>console.log('hello');</script>
+<script>console.log({{ linklists['main-menu'] | size }});</script>
+<script>console.log({{ linklists['main-menu-custom'] | size }});</script>
+{%- assign menu_items = linklists[section.settings.menu].links -%}
 {%- assign menu_json = menu_items | json -%}
 
-<script>console.log('hello');</script>
-<script>console.log({{linklists['footer'].links}});</script>
 
 <site-header 
   logo="{{ section.settings.logo | image_url }}" name="{{ section.settings.menu.links }}"
