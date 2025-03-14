@@ -131,7 +131,7 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
+      const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
 
       // Add desktop links
       menu.forEach(item => {
@@ -154,7 +154,7 @@ class SiteHeader extends HTMLElement {
     const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
     
     menuButton.addEventListener("click", () => {
-      const mobileMenu = this.shadowRoot.querySelector("header-drawer details .mobile-menu");
+      const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
