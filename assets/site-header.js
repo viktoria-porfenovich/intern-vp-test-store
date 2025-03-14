@@ -98,7 +98,7 @@ class SiteHeader extends HTMLElement {
           <header-drawer class="menu-drawer">
             <details>
               <summary class="header__icon" aria-label="Close menu">
-                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </summary>
