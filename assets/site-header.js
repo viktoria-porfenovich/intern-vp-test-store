@@ -159,6 +159,11 @@ class SiteHeader extends HTMLElement {
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
     });
+
+marker._icon.style.display = 'none';
+
+
+    
   }
 
   
