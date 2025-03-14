@@ -27,7 +27,7 @@ class SiteHeader extends HTMLElement {
         }
         .nav-links {
           display: flex;
-          gap: 20px;
+          gap: 60px;
         }
         .nav-links a {
           text-decoration: none;
