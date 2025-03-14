@@ -3,20 +3,30 @@
   "name": "Site Header",
   "settings": [
     {
-      "type": "text",
-      "id": "header_text",
-      "label": "Header Text"
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Select Menu",
+      "default": "main-menu"
     }
   ],
   "presets": [
     {
       "name": "Site Header",
-      "category": "Custom"
+      "category": "Header"
     }
   ]
 }
 {% endschema %}
 
-<site-header>
-  {{ section.settings.header_text }}
+{%- assign menu_items = linklists[section.settings.menu].links -%}
+{%- assign menu_json = menu_items | json -%}
+
+<site-header 
+  logo="{{ section.settings.logo | image_url }}" 
+  menu='{{ menu_json | escape }}'>
 </site-header>
