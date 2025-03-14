@@ -67,6 +67,23 @@ class SiteHeader extends HTMLElement {
          /* header-drawer {
             display: none;  Hide mobile menu button on desktop */
           }
+          
+          details:not([open]) > .header__icon .icon-close,
+          details[open] > .header__icon--menu .icon-hamburger {
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.8);
+          }
+
+          details[open]:not > .header__icon .icon-close {
+            visibility: hidden;
+          }
+
+          details[open]:not > .header__icon .icon-hamburger {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1.07);
+          }
         }
 
       </style>
