@@ -144,12 +144,6 @@ class SiteHeader extends HTMLElement {
     });
   }
 
-menuButton.addEventListener('click', () => {
-    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', !isExpanded);
-    drawer.classList.toggle('is-open'); // You might have a CSS class to show the menu
-});
-  
 }
 
 // Register custom header element
