@@ -27,7 +27,7 @@
 {%- assign menu_json = menu_items | json -%}
 
 <script>console.log('hello');</script>
-<script>console.log({{linklists.main-menu.links}});</script>
+<script>console.log({{linklists['main-menu'].links}});</script>
 
 <site-header 
   logo="{{ section.settings.logo | image_url }}" name="{{ section.settings.menu.links }}"
