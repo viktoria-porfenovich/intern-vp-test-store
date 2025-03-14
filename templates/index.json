@@ -86,7 +86,7 @@
         "feature_item_VFpwmD": {
           "type": "feature_item",
           "settings": {
-            "feature_image": "shopify://shop_images/paw.png",
+            "feature_image": "shopify://shop_images/icons8-paw-96.png",
             "feature_title": "Paw",
             "feature_subtitle": "Desktop publishing packages"
           }
