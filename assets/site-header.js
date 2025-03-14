@@ -85,7 +85,7 @@ class SiteHeader extends HTMLElement {
             transform: scale(1.07);
           }
         }
-::-webkit-details-marker {   display:none; }
+
       </style>
 
       <header>
@@ -111,8 +111,8 @@ class SiteHeader extends HTMLElement {
                   <path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </summary>
-              <div class="mobile-menu"></div>
             </details>
+            <div class="mobile-menu"></div>
           </header-drawer>
         </div>
       </header>
