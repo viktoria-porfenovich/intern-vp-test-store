@@ -23,9 +23,7 @@
 }
 {% endschema %}
 
-<script>console.log('--start--');</script>
-{%- assign menu_items = linklists[section.settings.menu].links -%}
-
+{% comment %} Convert listlinks into a JSON array {% endcomment %}
 {%- assign menu_json = '[' -%}
 {%- for link in linklists[section.settings.menu].links -%}
   {%- assign item = '{ "title": "' | append: link.title | append: '", "url": "' | append: link.url | append: '" }' -%}
@@ -36,10 +34,7 @@
 {%- endfor -%}
 {%- assign menu_json = menu_json | append: ']' -%}
 
-
-<script>console.log('--end--');</script>
-
 <site-header 
   logo="{{ section.settings.logo | image_url }}" 
-  menu="{{ menu_json | escape }}"><script>console.log({{ menu_json }});</script>
+  menu="{{ menu_json | escape }}">
 </site-header>
