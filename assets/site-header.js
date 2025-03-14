@@ -85,7 +85,7 @@ class SiteHeader extends HTMLElement {
             transform: scale(1.07);
           }
         }
-
+::-webkit-details-marker {   display:none; }
       </style>
 
       <header>
@@ -160,7 +160,6 @@ class SiteHeader extends HTMLElement {
       menuButton.setAttribute('aria-expanded', !isExpanded);
     });
 
-marker._icon.style.display = 'none';
 
 
     
