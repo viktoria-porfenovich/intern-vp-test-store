@@ -138,12 +138,6 @@ class SiteHeader extends HTMLElement {
     }
   }
 
-    // Mobile menu toggle
-    this.shadowRoot.getElementById("hamburger").addEventListener("click", () => {
-      const mobileMenu = this.shadowRoot.getElementById("mobile-menu");
-      mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
-    });
-  
 }
 
 // Register custom header element
