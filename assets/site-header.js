@@ -86,19 +86,15 @@ class SiteHeader extends HTMLElement {
           <!-- Desktop Menu -->
           <nav class="nav-links"></nav>
 
-          <!-- Mobile Open Button -->
-          <button is="header-drawer-button" class="header-drawer-toggle" aria-label="Open menu">
-            <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="25" height="2" fill="#0B0D21"/>
-              <rect y="7" width="25" height="2" fill="#0B0D21"/>
-            </svg>
-          </button>
-
           <!-- Mobile Menu (Header Drawer) -->
           <header-drawer class="menu-drawer">
             <details>
               <summary class="header__icon" aria-label="Close menu">
-                <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="header-drawer-toggle icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="25" height="2" fill="#0B0D21"/>
+                  <rect y="7" width="25" height="2" fill="#0B0D21"/>
+                </svg>
+                <svg width="25" height="25" viewBox="0 0 20 20" fill="none" class="icon icon-close" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </summary>
@@ -141,6 +137,12 @@ class SiteHeader extends HTMLElement {
       });
     }
   }
+
+    // Mobile menu toggle
+    this.shadowRoot.getElementById("hamburger").addEventListener("click", () => {
+      const mobileMenu = this.shadowRoot.getElementById("mobile-menu");
+      mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+    });
   
 }
 
