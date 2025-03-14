@@ -89,7 +89,7 @@ class SiteHeader extends HTMLElement {
           <!-- Mobile Menu (Header Drawer) -->
           <header-drawer class="menu-drawer">
             <details>
-              <summary class="header__icon" aria-label="Close menu" aria-expanded>
+              <summary class="header__icon" aria-label="Close menu" aria-expanded="">
                 <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="header-drawer-toggle icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
                   <rect width="25" height="2" fill="#0B0D21"/>
                   <rect y="7" width="25" height="2" fill="#0B0D21"/>
