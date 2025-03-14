@@ -67,6 +67,7 @@ class SiteHeader extends HTMLElement {
         }
 
         @media (min-width: 769px) {
+          header-drawer,
           .header-drawer-toggle {
             display: none; /* Hide mobile menu button on desktop */
           }
