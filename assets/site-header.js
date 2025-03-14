@@ -45,29 +45,58 @@ class SiteHeader extends HTMLElement {
             display: none;
           }
         }
+
+        /* 📌 Sticky Mobile Header */
+        @media (max-width: 768px) {
+          .header-container {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            padding: 10px 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          }
+          
+          .nav-links {
+            display: none; /* Hide desktop menu */
+          }
+
+          .header-drawer-toggle {
+            display: block; /* Show mobile menu button */
+          }
+        }
+
+        @media (min-width: 769px) {
+          .header-drawer-toggle {
+            display: none; /* Hide mobile menu button on desktop */
+          }
+        }
+
       </style>
 
       <header>
         <div class="header-container">
-          <button is="header-drawer-button" aria-label="Open menu" class="header__icon header-drawer-toggle">
-            <svg width="25" height="9" viewBox="0 0 25 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="25" height="2" fill="#0B0D21"/>
-              <rect y="7" width="25" height="2" fill="#0B0D21"/>
+          <!-- Mobile Open Button -->
+          <button is="header-drawer-button" class="header-drawer-toggle" aria-label="Open menu">
+            <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2"/>
             </svg>
           </button>
 
+          <!-- Logo -->
           <div class="logo">
             <a href="/"><img id="logo-img" src="" alt="Logo"></a>
           </div>
 
+          <!-- Desktop Menu -->
           <nav class="nav-links"></nav>
 
+          <!-- Mobile Menu (Header Drawer) -->
           <header-drawer class="menu-drawer">
             <details>
               <summary class="header__icon" aria-label="Close menu">
-                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24.8796" height="1.99037" transform="matrix(0.707105 -0.707108 0.707105 0.707108 0 17.5925)" fill="#ccc"/>
-                  <rect width="24.8796" height="1.99037" transform="matrix(-0.707105 -0.707108 -0.707105 0.707108 19 17.5925)" fill="#ccc"/>
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </summary>
               <div class="mobile-menu"></div>
@@ -90,16 +119,22 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.querySelector(".mobile-menu");
+      const mobileMenu = this.shadowRoot.querySelector("header-drawer details");
 
+      // Add desktop links
       menu.forEach(item => {
         const link = document.createElement("a");
         link.href = item.url;
         link.textContent = item.title;
         navContainer.appendChild(link);
 
-        const mobileLink = link.cloneNode(true);
-        mobileMenu.appendChild(mobileLink);
+        // Add mobile links inside header-drawer
+        if (mobileMenu) {
+          const mobileLink = document.createElement("a");
+          mobileLink.href = item.url;
+          mobileLink.textContent = item.title;
+          mobileMenu.appendChild(mobileLink);
+        }
       });
     }
   }
