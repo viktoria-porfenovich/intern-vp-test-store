@@ -1,6 +1,22 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Site Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Site Header",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
+
+<site-header>
+  {{ section.settings.header_text }}
+</site-header>
