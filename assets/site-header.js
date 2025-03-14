@@ -40,56 +40,38 @@ class SiteHeader extends HTMLElement {
           text-decoration: none;
           color: var(--menu-text, #EBC217);
         }
-        .hamburger {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          cursor: pointer;
-        }
-        .hamburger div {
-          width: 25px;
-          height: 3px;
-          background: var(--menu-text, #0B0D21);
-        }
-        .mobile-menu {
-          display: none;
-          flex-direction: column;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          width: 100%;
-          background: white;
-          padding: 10px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .mobile-menu a {
-          padding: 10px;
-          display: block;
-          text-align: center;
-          color: var(--menu-text, #0B0D21);
-          text-decoration: none;
-        }
         @media (max-width: 768px) {
           .nav-links {
             display: none;
-          }
-          .hamburger {
-            display: flex;
           }
         }
       </style>
 
       <header>
         <div class="header-container">
+          <button is="header-drawer-button" aria-label="Open menu" class="header__icon header-drawer-toggle">
+            <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+
           <div class="logo">
             <a href="/"><img id="logo-img" src="" alt="Logo"></a>
           </div>
+
           <nav class="nav-links"></nav>
-          <div class="hamburger" id="hamburger">
-            <div></div><div></div><div></div>
-          </div>
+
+          <header-drawer class="menu-drawer">
+            <details>
+              <summary class="header__icon" aria-label="Close menu">
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </summary>
+              <div class="mobile-menu"></div>
+            </details>
+          </header-drawer>
         </div>
-        <div class="mobile-menu" id="mobile-menu"></div>
       </header>
     `;
   }
