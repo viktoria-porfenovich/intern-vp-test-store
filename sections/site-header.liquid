@@ -1,0 +1,40 @@
+{% schema %}
+    {
+      "name": "Site Header",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select Menu",
+          "default": "main-menu"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Site Header",
+          "category": "Header"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    {% comment %} Convert listlinks into a JSON array {% endcomment %}
+    {%- assign menu_json = '[' -%}
+    {%- for link in linklists[section.settings.menu].links -%}
+      {%- assign item = '{ "title": "' | append: link.title | append: '", "url": "' | append: link.url | append: '" }' -%}
+      {%- assign menu_json = menu_json | append: item -%}
+      {%- unless forloop.last -%}
+        {%- assign menu_json = menu_json | append: ',' -%}
+      {%- endunless -%}
+    {%- endfor -%}
+    {%- assign menu_json = menu_json | append: ']' -%}
+    
+    <site-header 
+      logo="{{ section.settings.logo | image_url }}" 
+      menu="{{ menu_json | escape }}">
+    </site-header>
