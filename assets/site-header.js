@@ -132,7 +132,9 @@ class SiteHeader extends HTMLElement {
           header-drawer {
             display: none; /* Hide mobile menu button on desktop */
           }
-
+          .header-container header .logo {
+            height: 55px;
+          }
         }
 
       </style>
