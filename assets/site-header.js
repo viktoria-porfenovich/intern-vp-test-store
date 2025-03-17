@@ -65,46 +65,39 @@ class SiteHeader extends HTMLElement {
             display: block;
           }
 
-#menu-drawer {
-display: flex;
-    position: absolute;
-    transform: translate(0);
-    visibility: visible;
-    z-index: 6;
-    left: 0px;
-    top: 100%;
-    width: 100%;
-    padding: 0px;
-    background-color: #fff;
-    height: 100vh;
-}
-
-#menu-drawer .menu-drawer__inner-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-#menu-drawer .menu-drawer__inner-navigation {
-display: grid;
-    grid-template-rows: 1fr auto;
-    align-content: space-between;
-    overflow-y: auto;
-    height: 100%;
-    padding: 3rem 0;
-}
-#menu-drawer .nav-links.menu-drawer__nav-links a {
-display: flex;
-    align-items: center;
-    margin-bottom: .2rem;
-        font-size: 40px;
-        justify-content: center;
-}
-
-        }
-
-        @media (min-width: 769px) {
-          header-drawer {
-            display: none; /* Hide mobile menu button on desktop */
+          #menu-drawer {
+          display: flex;
+              position: absolute;
+              transform: translate(0);
+              visibility: visible;
+              z-index: 6;
+              left: 0px;
+              top: 100%;
+              width: 100%;
+              padding: 0px;
+              background-color: #fff;
+              height: 100vh;
+          }
+          
+          #menu-drawer .menu-drawer__inner-container {
+              position: relative;
+              height: 100%;
+              width: 100%;
+          }
+          #menu-drawer .menu-drawer__inner-navigation {
+          display: grid;
+              grid-template-rows: 1fr auto;
+              align-content: space-between;
+              overflow-y: auto;
+              height: 100%;
+              padding: 3rem 0;
+          }
+          #menu-drawer .nav-links.menu-drawer__nav-links a {
+          display: flex;
+              align-items: center;
+              margin-bottom: .2rem;
+                  font-size: 40px;
+                  justify-content: center;
           }
           
           details:not([open]) > .header__icon .icon-close,
@@ -123,6 +116,13 @@ display: flex;
             opacity: 1;
             transform: scale(1.07);
           }
+        }
+
+        @media (min-width: 769px) {
+          header-drawer {
+            display: none; /* Hide mobile menu button on desktop */
+          }
+
         }
 
       </style>
