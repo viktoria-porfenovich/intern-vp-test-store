@@ -22,7 +22,7 @@
   ]
 }
 {% endschema %}
-
+    
 {% comment %} Convert listlinks into a JSON array {% endcomment %}
 {%- assign menu_json = '[' -%}
 {%- for link in linklists[section.settings.menu].links -%}
@@ -30,7 +30,7 @@
   {%- assign menu_json = menu_json | append: item -%}
   {%- unless forloop.last -%}
     {%- assign menu_json = menu_json | append: ',' -%}
-  {%- endunless -%}
+    {%- endunless -%}
 {%- endfor -%}
 {%- assign menu_json = menu_json | append: ']' -%}
 
