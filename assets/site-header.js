@@ -103,8 +103,8 @@ display: flex;
         }
 
         @media (min-width: 769px) {
-         /* header-drawer {
-            display: none;  Hide mobile menu button on desktop */
+          header-drawer {
+            display: none; /* Hide mobile menu button on desktop */
           }
           
           details:not([open]) > .header__icon .icon-close,
