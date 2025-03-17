@@ -114,7 +114,9 @@ class SiteHeader extends HTMLElement {
             </details>
             <div id="menu-drawer" class="mobile-menu" style="display:none;">
               <div class="menu-drawer__inner-container">
-                <div class="menu-drawer__inner-navigation"></div>
+                <div class="menu-drawer__inner-navigation">
+                  <nav class="nav-links menu-drawer__nav-links"></nav>
+                </div>
               </div>
             </div>
           </header-drawer>
@@ -136,7 +138,7 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.querySelector("#menu-drawer .menu-drawer__inner-container .menu-drawer__inner-navigation");
+      const mobileMenu = this.shadowRoot.querySelector("#menu-drawer .menu-drawer__inner-container .menu-drawer__inner-navigation .menu-drawer__nav-links");
 
       // Add desktop links
       menu.forEach(item => {
