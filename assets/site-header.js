@@ -138,7 +138,7 @@ class SiteHeader extends HTMLElement {
       </style>
 
       <sticky-header class="header-container sticky">
-        <header class="header header--middle-left header--mobile-center page-width header--has-menu">
+        <header class="header page-width header--has-menu">
 
           <!-- Logo -->
           <div class="logo">
