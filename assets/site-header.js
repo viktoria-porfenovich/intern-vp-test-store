@@ -59,50 +59,45 @@ class SiteHeader extends HTMLElement {
           .header-container header .logo img {
             height: 38px;
           }
-          
           .nav-links {
             display: none; /* Hide desktop menu */
           }
-
           .menu-drawer__nav-links {
             display: block;
           }
-
           #menu-drawer {
-          display: flex;
-              position: absolute;
-              transform: translate(0);
-              visibility: visible;
-              z-index: 6;
-              left: 0px;
-              top: 100%;
-              width: 100%;
-              padding: 0px;
-              background-color: #fff;
-              height: 100vh;
+            display: flex;
+            position: absolute;
+            transform: translate(0);
+            visibility: visible;
+            z-index: 6;
+            left: 0px;
+            top: 100%;
+            width: 100%;
+            padding: 0px;
+            background-color: #fff;
+            height: 100vh;
           }
-          
           #menu-drawer .menu-drawer__inner-container {
-              position: relative;
-              height: 100%;
-              width: 100%;
+            position: relative;
+            height: 100%;
+            width: 100%;
           }
           #menu-drawer .menu-drawer__inner-navigation {
-          display: grid;
-              grid-template-rows: 1fr auto;
-              align-content: space-between;
-              overflow-y: auto;
-              height: 100%;
-              padding: 3rem 0;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            align-content: space-between;
+            overflow-y: auto;
+            height: 100%;
+            padding: 3rem 0;
           }
           #menu-drawer .nav-links.menu-drawer__nav-links a {
-          display: flex;
-              align-items: center;
-              margin-bottom: .2rem;
-                  font-size: 40px;
-                  justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: .2rem;
+            font-size: 40px;
+            justify-content: center;
           }
-          
           details:not([open]) > .header__icon .icon-close,
           details[open] > .header__icon .icon-hamburger {
             visibility: hidden;
@@ -110,17 +105,14 @@ class SiteHeader extends HTMLElement {
             transform: scale(0.8);
             width: 0;
           }
-
           details[open]:not > .header__icon .icon-close {
             visibility: hidden;
           }
-
           details[open]:not > .header__icon .icon-hamburger {
             visibility: visible;
             opacity: 1;
             transform: scale(1.07);
           }
-          
           details > summary {
             list-style: none;
           }
@@ -213,23 +205,21 @@ class SiteHeader extends HTMLElement {
     const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
     const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
     const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+
     menuButton.addEventListener("click", () => {
-      
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
-      
+
         if (menuButton.getAttribute('aria-expanded') === 'true') {
           headerMenu.style.backgroundColor = '#000';
           this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo-mobile.svg?v=1741944507";
-          console.log('expanded');
         }
         if (menuButton.getAttribute('aria-expanded') === 'false') {
           headerMenu.style.backgroundColor = '#fff';
           this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
         }
     });
-
   }
 }
 
