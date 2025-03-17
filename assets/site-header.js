@@ -220,24 +220,6 @@ class SiteHeader extends HTMLElement {
             this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
           }
       });
-
-      const anchorLinks = this.shadowRoot.querySelectorAll('.menu-drawer__nav-links a');
-
-    anchorLinks.forEach((anchorLink) => {
-    anchorLink.addEventListener('click', () => {
-      console.log("anchor");
-        mobileMenu.style.display = "none";
-      menuButton.setAttribute('aria-expanded', 'false');
-      headerMenu.style.backgroundColor = '#fff';
-            this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
-      this.shadowRoot.querySelector(".header__icon .icon-hamburger").style.cssText=`
-              visibility: visible;
-              opacity: 1;
-          `;
-    })
-    });
-
-      
     }
   }
   
