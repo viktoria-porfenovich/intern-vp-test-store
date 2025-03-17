@@ -120,6 +120,10 @@ class SiteHeader extends HTMLElement {
             opacity: 1;
             transform: scale(1.07);
           }
+          
+          details summary::-webkit-details-marker {
+            display: none;
+          }
         }
 
         @media (min-width: 769px) {
@@ -154,7 +158,6 @@ class SiteHeader extends HTMLElement {
                   <rect width="24.8796" height="1.99037" transform="matrix(0.707105 -0.707108 0.707105 0.707108 0 17.5925)" fill="white"/>
                   <rect width="24.8796" height="1.99037" transform="matrix(-0.707105 -0.707108 -0.707105 0.707108 19 17.5925)" fill="white"/>
                 </svg>
-
               </summary>
             </details>
             <div id="menu-drawer" class="mobile-menu" style="display:none;">
@@ -218,7 +221,7 @@ class SiteHeader extends HTMLElement {
           headerMenu.classList.add('dark');
         }
     });
-    
+
   }
 
   
