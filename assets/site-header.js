@@ -150,6 +150,7 @@ class SiteHeader extends HTMLElement {
         link.href = item.url;
         link.textContent = item.title;
         navContainer.appendChild(link);
+        link.classList.add('menu-drawer__menu-item', 'list-menu__item', 'link', 'link--text');
 
         // Add mobile links inside header-drawer
         if (mobileMenu) {
@@ -157,6 +158,7 @@ class SiteHeader extends HTMLElement {
           mobileLink.href = item.url;
           mobileLink.textContent = item.title;
           mobileMenu.appendChild(mobileLink);
+          mobileLink.classList.add('menu-drawer__menu-item', 'list-menu__item', 'link', 'link--text');
         }
       });
     }
