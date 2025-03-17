@@ -55,9 +55,10 @@ class SiteHeader extends HTMLElement {
             background: white;
             padding: 16px 15px;
           }
-        .logo img {
-          height: 38px;
-        }
+          .header-container header .logo,
+          .header-container header .logo img {
+            height: 38px;
+          }
           
           .nav-links {
             display: none; /* Hide desktop menu */
