@@ -220,15 +220,12 @@ class SiteHeader extends HTMLElement {
       menuButton.setAttribute('aria-expanded', !isExpanded);
       const headerMenu = this.shadowRoot.querySelector("sticky-header header");
         if (menuButton.getAttribute('aria-expanded') === 'true') {
-          headerMenu.style.backgroundColor = '#ccc';
+          headerMenu.style.backgroundColor = 'black';
+          this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo-mobile.svg?v=1741944507";
           console.log('expanded');
         }
         if (menuButton.getAttribute('aria-expanded') === 'false') {
-          headerMenu.style.backgroundColor = '#fff';
-          
-      this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo-mobile.svg?v=1741944507";
-
-          
+          headerMenu.style.backgroundColor = '#fff';    
         }
     });
 
