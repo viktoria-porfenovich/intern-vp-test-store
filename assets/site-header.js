@@ -78,6 +78,7 @@ class SiteHeader extends HTMLElement {
               top: 100%;
               width: 100%;
               padding: 0px;
+              background-color: #fff;
               height: 100vh;
           }
           
@@ -213,6 +214,7 @@ class SiteHeader extends HTMLElement {
 
     const headerMenu = this.shadowRoot.querySelector("sticky-header header");
     if (isExpanded) {
+      console.log('expanded');
       headerMenu.classList.add('dark');
     }
 
