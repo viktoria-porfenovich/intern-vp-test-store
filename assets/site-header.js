@@ -14,7 +14,7 @@ class SiteHeader extends HTMLElement {
           background: var(--header-bg, #fff);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .header-container {
+        .header-container header {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -48,7 +48,7 @@ class SiteHeader extends HTMLElement {
 
         /* 📌 Sticky Mobile Header */
         @media (max-width: 768px) {
-          .header-container {
+          .header-container header {
             position: sticky;
             top: 0;
             z-index: 1000;
