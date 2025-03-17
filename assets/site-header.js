@@ -23,7 +23,7 @@ class SiteHeader extends HTMLElement {
           margin: 0 auto;
         }
         .logo img {
-          height: 38px;
+          height: 55x;
         }
         .nav-links {
           display: flex;
@@ -55,9 +55,9 @@ class SiteHeader extends HTMLElement {
             background: white;
             padding: 16px 15px;
           }
-          .header-container header .logo {
-            height: 38px;
-          }
+        .logo img {
+          height: 38px;
+        }
           
           .nav-links {
             display: none; /* Hide desktop menu */
@@ -131,9 +131,6 @@ class SiteHeader extends HTMLElement {
         @media (min-width: 769px) {
           header-drawer {
             display: none; /* Hide mobile menu button on desktop */
-          }
-          .header-container header .logo {
-            height: 55px;
           }
         }
 
