@@ -150,7 +150,7 @@ class SiteHeader extends HTMLElement {
         link.href = item.url;
         link.textContent = item.title;
         navContainer.appendChild(link);
-        link.classList.add('menu-drawer__menu-item', 'list-menu__item', 'link', 'link--text');
+        link.classList.add('header__menu-item', 'list-menu__item', 'link', 'link--text');
 
         // Add mobile links inside header-drawer
         if (mobileMenu) {
