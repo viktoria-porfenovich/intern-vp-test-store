@@ -88,8 +88,8 @@ class SiteHeader extends HTMLElement {
 
       </style>
 
+      <sticky-header class="header-container sticky">
       <header>
-        <div class="header-container">
 
           <!-- Logo -->
           <div class="logo">
@@ -112,10 +112,11 @@ class SiteHeader extends HTMLElement {
                 </svg>
               </summary>
             </details>
-            <div class="mobile-menu"></div>
+            <div class="mobile-menu" style="display:none;"></div>
           </header-drawer>
-        </div>
+
       </header>
+      </sticky-header>
     `;
   }
 
