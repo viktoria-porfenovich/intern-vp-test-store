@@ -221,7 +221,7 @@ class SiteHeader extends HTMLElement {
           }
       });
 
-      const anchorLinks = document.querySelectorAll('.menu-drawer__nav-links a');
+      const anchorLinks = this.shadowRoot.querySelector('.menu-drawer__nav-links a');
 
     anchorLinks.forEach((anchorLink) => {
     anchorLink.addEventListener('click', () => {
