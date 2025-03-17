@@ -61,6 +61,10 @@ class SiteHeader extends HTMLElement {
             display: none; /* Hide desktop menu */
           }
 
+          .menu-drawer__nav-links {
+            display: block;
+          }
+
         }
 
         @media (min-width: 769px) {
