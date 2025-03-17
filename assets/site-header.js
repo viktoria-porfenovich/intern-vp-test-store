@@ -225,7 +225,7 @@ class SiteHeader extends HTMLElement {
 
     anchorLinks.forEach((anchorLink) => {
     anchorLink.addEventListener('click', () => {
-        mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+        mobileMenu.style.display = mobileMenu.style.display === "none";
     })
     });
     }
