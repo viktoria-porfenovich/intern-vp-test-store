@@ -213,6 +213,7 @@ class SiteHeader extends HTMLElement {
     });
 
     const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
     if (isExpanded) {
       console.log('expanded');
       headerMenu.classList.add('dark');
