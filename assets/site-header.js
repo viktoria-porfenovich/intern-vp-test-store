@@ -89,7 +89,7 @@ class SiteHeader extends HTMLElement {
       </style>
 
       <sticky-header class="header-container sticky">
-      <header>
+        <header class="header header--middle-left header--mobile-center page-width header--has-menu">
 
           <!-- Logo -->
           <div class="logo">
@@ -119,7 +119,7 @@ class SiteHeader extends HTMLElement {
             </div>
           </header-drawer>
 
-      </header>
+        </header>
       </sticky-header>
     `;
   }
