@@ -53,11 +53,10 @@ class SiteHeader extends HTMLElement {
             top: 0;
             z-index: 1000;
             background: white;
-            padding: 10px 15px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 16px 15px;
           }
-          .header-container header.dark {
-            background-color: #ccc;
+          .header-container header .logo {
+            height: 38px;
           }
           
           .nav-links {
@@ -225,7 +224,8 @@ class SiteHeader extends HTMLElement {
           console.log('expanded');
         }
         if (menuButton.getAttribute('aria-expanded') === 'false') {
-          headerMenu.style.backgroundColor = '#fff';    
+          headerMenu.style.backgroundColor = '#fff';
+          this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
         }
     });
 
