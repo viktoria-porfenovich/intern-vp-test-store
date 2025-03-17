@@ -204,11 +204,11 @@ class SiteHeader extends HTMLElement {
       // Mobile menu toggle
       const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
       const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
-      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       const headerMenu = this.shadowRoot.querySelector("sticky-header header");
   
       menuButton.addEventListener("click", () => {
         mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+        const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !isExpanded);
   
           if (menuButton.getAttribute('aria-expanded') === 'true') {
@@ -227,7 +227,7 @@ class SiteHeader extends HTMLElement {
     anchorLink.addEventListener('click', () => {
       console.log("anchor");
         mobileMenu.style.display = "none";
-      menuButton.setAttribute('aria-expanded', !isExpanded);
+      menuButton.setAttribute('aria-expanded') === 'false';
     })
     });
 
