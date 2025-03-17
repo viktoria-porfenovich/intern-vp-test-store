@@ -203,22 +203,19 @@ class SiteHeader extends HTMLElement {
     }
 // Mobile menu toggle
 
-    const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
+    const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");\
     
     menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
+      const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+        if (isExpanded) {
+          console.log('expanded');
+          headerMenu.classList.add('dark');
+        }
     });
-
-    const headerMenu = this.shadowRoot.querySelector("sticky-header header");
-    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-    if (isExpanded) {
-      console.log('expanded');
-      headerMenu.classList.add('dark');
-    }
-
     
   }
 
