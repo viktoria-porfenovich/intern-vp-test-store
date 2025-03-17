@@ -23,7 +23,7 @@ class SiteHeader extends HTMLElement {
           margin: 0 auto;
         }
         .logo img {
-          max-height: 55px;
+          height: 38px;
         }
         .nav-links {
           display: flex;
@@ -156,7 +156,7 @@ class SiteHeader extends HTMLElement {
                   <rect width="25" height="2" fill="#0B0D21"/>
                   <rect y="7" width="25" height="2" fill="#0B0D21"/>
                 </svg>
-                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" class="icon icon-close"  xmlns="http://www.w3.org/2000/svg">
+                <svg width="19" height="25" viewBox="0 -3 19 19" fill="none" class="icon icon-close"  xmlns="http://www.w3.org/2000/svg">
                   <rect width="24.8796" height="1.99037" transform="matrix(0.707105 -0.707108 0.707105 0.707108 0 17.5925)" fill="white"/>
                   <rect width="24.8796" height="1.99037" transform="matrix(-0.707105 -0.707108 -0.707105 0.707108 19 17.5925)" fill="white"/>
                 </svg>
