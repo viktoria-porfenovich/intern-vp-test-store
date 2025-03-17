@@ -221,14 +221,16 @@ class SiteHeader extends HTMLElement {
           }
       });
 
-      const anchorLinks = document.querySelectorAll('.menu-drawer__nav-link a');
+      const anchorLinks = document.querySelectorAll('.menu-drawer__nav-link > a');
 
     anchorLinks.forEach((anchorLink) => {
     anchorLink.addEventListener('click', () => {
       console.log("anchor");
-        mobileMenu.style.display = mobileMenu.style.display === "none";
+        mobileMenu.style.display = "none";
     })
     });
+
+      
     }
   }
   
