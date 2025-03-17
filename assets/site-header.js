@@ -90,7 +90,7 @@ display: grid;
     overflow-y: auto;
     height: 100%;
 }
-#menu-drawer .menu-drawer__menu-item .nav-links.menu-drawer__nav-links a {
+#menu-drawer .nav-links.menu-drawer__nav-links a {
 display: flex;
     align-items: center;
     margin-bottom: .2rem;
