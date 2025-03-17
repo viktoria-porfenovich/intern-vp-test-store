@@ -105,6 +105,7 @@ class SiteHeader extends HTMLElement {
             visibility: hidden;
             opacity: 0;
             transform: scale(0.8);
+            width: 0;
           }
 
           details[open]:not > .header__icon .icon-close {
