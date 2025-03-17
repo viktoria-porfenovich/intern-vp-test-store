@@ -210,8 +210,8 @@ class SiteHeader extends HTMLElement {
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
-      const headerMenu = this.shadowRoot.querySelector("sticky-header header");
         if (isExpanded) {
+          const headerMenu = this.shadowRoot.querySelector("sticky-header header");
           console.log('expanded');
           headerMenu.classList.add('dark');
         }
