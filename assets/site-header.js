@@ -220,7 +220,7 @@ class SiteHeader extends HTMLElement {
       menuButton.setAttribute('aria-expanded', !isExpanded);
         if (menuButton.getAttribute('aria-expanded') === 'true') {
           const headerMenu = this.shadowRoot.querySelector("sticky-header header");
-          headerMenu.backgroundColor = prompt('background color?', '#ccc');
+          headerMenu.backgroundColor = '#ccc';
           console.log('expanded');
         }
     });
