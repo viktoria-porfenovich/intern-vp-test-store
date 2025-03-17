@@ -65,6 +65,37 @@ class SiteHeader extends HTMLElement {
             display: block;
           }
 
+#menu-drawer {
+display: flex;
+    position: absolute;
+    /* transform: translate(-100%); */
+    visibility: visible;
+    z-index: 6;
+    left: 0px;
+    top: 100%;
+    width: 100%;
+    padding: 0px;
+    background-color: #fff;
+    height: 100vh;
+}
+
+#menu-drawer .menu-drawer__inner-container {
+    position: relative;
+    height: 100%;
+}
+#menu-drawer .menu-drawer__inner-navigation {
+display: grid;
+    grid-template-rows: 1fr auto;
+    align-content: space-between;
+    overflow-y: auto;
+    height: 100%;
+}
+#menu-drawer .menu-drawer__menu-item a {
+display: flex;
+    align-items: center;
+    margin-bottom: .2rem;
+}
+
         }
 
         @media (min-width: 769px) {
