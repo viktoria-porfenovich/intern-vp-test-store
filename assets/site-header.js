@@ -121,9 +121,12 @@ class SiteHeader extends HTMLElement {
             transform: scale(1.07);
           }
           
-          details summary::-webkit-details-marker {
-            display: none;
-          }
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
         }
 
         @media (min-width: 769px) {
