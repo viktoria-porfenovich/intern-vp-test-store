@@ -225,6 +225,7 @@ class SiteHeader extends HTMLElement {
 
     anchorLinks.forEach((anchorLink) => {
     anchorLink.addEventListener('click', () => {
+      console.log("anchor");
         mobileMenu.style.display = mobileMenu.style.display === "none";
     })
     });
