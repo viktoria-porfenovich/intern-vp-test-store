@@ -112,7 +112,11 @@ class SiteHeader extends HTMLElement {
                 </svg>
               </summary>
             </details>
-            <div class="mobile-menu" style="display:none;"></div>
+            <div id="menu-drawer" class="mobile-menu" style="display:none;">
+              <div class="menu-drawer__inner-container">
+                <div class="menu-drawer__inner-navigation"></div>
+              </div>
+            </div>
           </header-drawer>
 
       </header>
@@ -132,7 +136,7 @@ class SiteHeader extends HTMLElement {
     if (menuJson) {
       const menu = JSON.parse(menuJson);
       const navContainer = this.shadowRoot.querySelector(".nav-links");
-      const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
+      const mobileMenu = this.shadowRoot.querySelector("#menu-drawer .menu-drawer__inner-container .menu-drawer__inner-navigation");
 
       // Add desktop links
       menu.forEach(item => {
