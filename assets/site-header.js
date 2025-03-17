@@ -121,12 +121,12 @@ class SiteHeader extends HTMLElement {
             transform: scale(1.07);
           }
           
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker {
-  display: none;
-}
+          details > summary {
+            list-style: none;
+          }
+          details > summary::-webkit-details-marker {
+            display: none;
+          }
         }
 
         @media (min-width: 769px) {
@@ -220,8 +220,8 @@ details > summary::-webkit-details-marker {
       menuButton.setAttribute('aria-expanded', !isExpanded);
         if (menuButton.getAttribute('aria-expanded') === 'true') {
           const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+          headerMenu.backgroundColor = prompt('background color?', '#ccc');
           console.log('expanded');
-          headerMenu.classList.add('dark');
         }
     });
 
