@@ -56,6 +56,9 @@ class SiteHeader extends HTMLElement {
             padding: 10px 15px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
           }
+          .header-container header.dark {
+            background-color: #ccc;
+          }
           
           .nav-links {
             display: none; /* Hide desktop menu */
@@ -75,7 +78,6 @@ class SiteHeader extends HTMLElement {
               top: 100%;
               width: 100%;
               padding: 0px;
-              background-color: #fff;
               height: 100vh;
           }
           
@@ -209,7 +211,10 @@ class SiteHeader extends HTMLElement {
       menuButton.setAttribute('aria-expanded', !isExpanded);
     });
 
-
+    const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+    if (isExpanded) {
+      headerMenu.classList.add('dark');
+    }
 
     
   }
