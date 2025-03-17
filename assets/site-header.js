@@ -228,6 +228,9 @@ class SiteHeader extends HTMLElement {
       console.log("anchor");
         mobileMenu.style.display = "none";
       menuButton.setAttribute('aria-expanded', 'false');
+      headerMenu.style.backgroundColor = '#fff';
+            this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
+          
     })
     });
 
