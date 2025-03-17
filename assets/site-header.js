@@ -68,7 +68,7 @@ class SiteHeader extends HTMLElement {
 #menu-drawer {
 display: flex;
     position: absolute;
-    /* transform: translate(-100%); */
+    transform: translate(0);
     visibility: visible;
     z-index: 6;
     left: 0px;
@@ -82,6 +82,7 @@ display: flex;
 #menu-drawer .menu-drawer__inner-container {
     position: relative;
     height: 100%;
+    width: 100%;
 }
 #menu-drawer .menu-drawer__inner-navigation {
 display: grid;
@@ -89,6 +90,7 @@ display: grid;
     align-content: space-between;
     overflow-y: auto;
     height: 100%;
+    padding: 3rem 0;
 }
 #menu-drawer .nav-links.menu-drawer__nav-links a {
 display: flex;
