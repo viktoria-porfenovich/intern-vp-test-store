@@ -146,7 +146,7 @@ class SiteHeader extends HTMLElement {
           <header-drawer class="menu-drawer">
             <details>
               <summary class="header__icon" aria-label="Close menu" aria-expanded="">
-                <svg width="25" height="9" viewBox="0 0 25 9" fill="none" class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
+                <svg width="25" height="9" viewBox="0 0 25 9" fill="#fff" class="icon icon-hamburger" xmlns="http://www.w3.org/2000/svg">
                   <rect width="25" height="2" fill="#0B0D21"/>
                   <rect y="7" width="25" height="2" fill="#0B0D21"/>
                 </svg>
@@ -211,7 +211,7 @@ class SiteHeader extends HTMLElement {
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
         if (menuButton.getAttribute('aria-expanded') === 'true') {
-          const headerMenu = this.shadowRoot.querySelector("sticky-header header");console.log(headerMenu);
+          const headerMenu = this.shadowRoot.querySelector("sticky-header header");
           console.log('expanded');
           headerMenu.classList.add('dark');
         }
