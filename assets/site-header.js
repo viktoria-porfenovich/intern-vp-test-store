@@ -208,18 +208,19 @@ class SiteHeader extends HTMLElement {
         }
       });
     }
-// Mobile menu toggle
 
+    // Mobile menu toggle
     const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
-    
+    const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
+    const headerMenu = this.shadowRoot.querySelector("sticky-header header");
     menuButton.addEventListener("click", () => {
-      const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
+      
       mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
       const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', !isExpanded);
-      const headerMenu = this.shadowRoot.querySelector("sticky-header header");
+      
         if (menuButton.getAttribute('aria-expanded') === 'true') {
-          headerMenu.style.backgroundColor = 'black';
+          headerMenu.style.backgroundColor = '#000';
           this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo-mobile.svg?v=1741944507";
           console.log('expanded');
         }
@@ -230,8 +231,6 @@ class SiteHeader extends HTMLElement {
     });
 
   }
-
-  
 }
 
 // Register custom header element
