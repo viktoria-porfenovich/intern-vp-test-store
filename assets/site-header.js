@@ -203,7 +203,7 @@ class SiteHeader extends HTMLElement {
     }
 // Mobile menu toggle
 
-    const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");\
+    const menuButton = this.shadowRoot.querySelector("header-drawer details .header__icon");
     
     menuButton.addEventListener("click", () => {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
