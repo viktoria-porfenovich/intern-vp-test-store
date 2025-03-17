@@ -227,6 +227,7 @@ class SiteHeader extends HTMLElement {
     anchorLink.addEventListener('click', () => {
       console.log("anchor");
         mobileMenu.style.display = "none";
+      menuButton.setAttribute('aria-expanded') === 'false'
     })
     });
 
