@@ -222,9 +222,9 @@ class SiteHeader extends HTMLElement {
       });
 
       const anchorLinks = this.shadowRoot.querySelectorAll('.menu-drawer__nav-link a');
-
-    anchorLinks.forEach((anchorLink) => { console.log(anchorLink);
-    anchorLink.addEventListener('click', () => { console.log('clicked');
+console.log(anchorLinks);
+    anchorLinks.forEach((anchorLink) => { 
+    anchorLink.addEventListener("click", () => { console.log('clicked');
         mobileMenu.trigger('click');
       console.log('triggerred');
     })
