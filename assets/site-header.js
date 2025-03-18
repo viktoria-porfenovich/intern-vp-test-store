@@ -206,7 +206,7 @@ class SiteHeader extends HTMLElement {
       const mobileMenu = this.shadowRoot.querySelector("header-drawer .mobile-menu");
       const headerMenu = this.shadowRoot.querySelector("sticky-header header");
   
-      menuButton.addEventListener("click", () => {
+/*      menuButton.addEventListener("click", () => {
         mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
         const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !isExpanded);
@@ -220,17 +220,12 @@ class SiteHeader extends HTMLElement {
             this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo.svg?v=1741944507";
           }
       });
+*/
 
-      const anchorLinks = this.shadowRoot.querySelectorAll('.menu-drawer__nav-link a');
-console.log(anchorLinks);
-    anchorLinks.forEach((anchorLink) => { 
-    anchorLink.addEventListener("click", () => { console.log('clicked');
-        mobileMenu.trigger('click');
-      console.log('triggerred');
-    })
-    });
-
-
+menuButton.onclick = function toggleNav() {
+  mobileMenu.classList.toggle('expanded');
+}
+      
       
     }
   }
