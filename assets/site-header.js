@@ -65,7 +65,7 @@ class SiteHeader extends HTMLElement {
             .menu-drawer__nav-links {
               display: block;
             }
-            #menu-drawer {
+            #menu-drawer.expanded {
               display: flex;
               position: absolute;
               transform: translate(0);
