@@ -224,7 +224,7 @@ class SiteHeader extends HTMLElement {
       const anchorLinks = document.querySelectorAll('.menu-drawer__nav-link a');
 
     anchorLinks.forEach((anchorLink) => {
-    anchorLink.addEventListener('click', () => {
+    anchorLink.addEventListener('click', () => { console.log('clicked');
         mobileMenu.trigger('click');
       console.log('triggerred');
     })
