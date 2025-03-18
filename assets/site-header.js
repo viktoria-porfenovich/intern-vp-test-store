@@ -154,7 +154,7 @@ class SiteHeader extends HTMLElement {
                   </svg>
                 </summary>
               </details>
-              <div id="menu-drawer" class="mobile-menu" style="display:none;">
+              <div id="menu-drawer" class="mobile-menu">
                 <div class="menu-drawer__inner-container">
                   <div class="menu-drawer__inner-navigation">
                     <nav class="nav-links menu-drawer__nav-links"></nav>
