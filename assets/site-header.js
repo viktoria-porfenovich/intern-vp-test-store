@@ -212,7 +212,7 @@ class SiteHeader extends HTMLElement {
         menuButton.setAttribute('aria-expanded', !isExpanded);
   
           if (menuButton.getAttribute('aria-expanded') === 'true') {
-const anchorLinks = this.shadowRoot.querySelectorAll('.menu-drawer__nav-link a'); console.log(anchorLinks);
+//const anchorLinks = this.shadowRoot.querySelectorAll('.menu-drawer__nav-link a'); console.log(anchorLinks);
             headerMenu.style.backgroundColor = '#000';
             this.shadowRoot.getElementById("logo-img").src = "https://cdn.shopify.com/s/files/1/0671/0041/0009/files/logo-mobile.svg?v=1741944507";
           }
