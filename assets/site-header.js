@@ -154,7 +154,7 @@ class SiteHeader extends HTMLElement {
                   </svg>
                 </summary>
               </details>
-              <div id="menu-drawer" class="mobile-menu" style="display:block;">
+              <div id="menu-drawer" class="mobile-menu" style="display:none;">
                 <div class="menu-drawer__inner-container">
                   <div class="menu-drawer__inner-navigation">
                     <nav class="nav-links menu-drawer__nav-links"></nav>
@@ -225,7 +225,7 @@ class SiteHeader extends HTMLElement {
 //menuButton.onclick = function toggleNav() {
 //  mobileMenu.classList.toggle('expanded');
 
-    const anchorLinks = this.shadowRoot.querySelectorAll(".menu-drawer__menu-item.list-menu__item"); console.log(anchorLinks);
+    const anchorLinks = this.shadowRoot.querySelectorAll(".menu-drawer__menu-item"); console.log(anchorLinks);
     anchorLinks.forEach((anchorLink) => { 
     anchorLink.addEventListener("click", () => { console.log('clicked');
     menuButton.click();
