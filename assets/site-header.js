@@ -66,7 +66,7 @@ class SiteHeader extends HTMLElement {
               display: block;
             }
             #menu-drawer.expanded {
-              display: flex;
+              display: flex !important;
               position: absolute;
               transform: translate(0);
               visibility: visible;
@@ -154,7 +154,7 @@ class SiteHeader extends HTMLElement {
                   </svg>
                 </summary>
               </details>
-              <div id="menu-drawer" class="mobile-menu">
+              <div id="menu-drawer" class="mobile-menu" style="display:none;">
                 <div class="menu-drawer__inner-container">
                   <div class="menu-drawer__inner-navigation">
                     <nav class="nav-links menu-drawer__nav-links"></nav>
