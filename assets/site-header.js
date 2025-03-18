@@ -221,22 +221,12 @@ class SiteHeader extends HTMLElement {
           }
       });
 
-
-//menuButton.onclick = function toggleNav() {
-//  mobileMenu.classList.toggle('expanded');
-
-    const anchorLinks = this.shadowRoot.querySelectorAll(".menu-drawer__menu-item"); console.log(anchorLinks);
-    anchorLinks.forEach((anchorLink) => { 
-    anchorLink.addEventListener("click", () => { console.log('clicked');
-    menuButton.click();
-      //  mobileMenu.toggle();
-      console.log('triggerred');
-    })
-    });
-  
-//}
-      
-      
+      const anchorLinks = this.shadowRoot.querySelectorAll(".menu-drawer__menu-item");
+      anchorLinks.forEach((anchorLink) => { 
+        anchorLink.addEventListener("click", () => {
+          menuButton.click();
+        })
+      });
     }
   }
   
